@@ -7,7 +7,7 @@ def ushort_uint(buffer):
 
 def buf2latin(buffer):
     length = unpack(">H", buffer[0:2])[0]
-    return length, unpack("%ds" % length, buffer[2:])[0].decode('latin1')
+    return length, unpack("%ds" % length, buffer[2:length + 2])[0].decode('latin1')
 
 
 def ascii2buf(*args):
