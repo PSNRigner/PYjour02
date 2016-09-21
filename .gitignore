@@ -1,0 +1,4 @@
+*.o
+main.py
+__pycache__
+.idea
